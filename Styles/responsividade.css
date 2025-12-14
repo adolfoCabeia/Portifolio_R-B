@@ -6,14 +6,15 @@
 }
 
 @media (max-width: 684px) {
-  .container{
+  .container {
     width: 100%;
   }
+
   header .cabecalho {
     padding: 0 20px;
   }
 
-  .galeriaSection{
+  .galeriaSection {
     padding: 0 20px;
   }
 
@@ -30,7 +31,7 @@
   }
 
   section.hero .circulo h2 {
-    font-size: 10rem;
+    font-size: 10.4rem;
   }
 
   section.hero .name-artist h2 {
@@ -51,15 +52,16 @@
     display: none;
   }
 
-  section.hero .img-artist{
+  section.hero .img-artist {
     width: 100vw !important;
-   
-  }  
-   section.hero .img-artist img{
+
+  }
+
+  section.hero .img-artist img {
     width: 100vw !important;
     height: 600px;
-  }  
-  
+  }
+
 
 
   section.about {
@@ -67,7 +69,7 @@
   }
 
   section.about h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   section.about .text-apresent p {
@@ -91,16 +93,21 @@
     position: none;
     margin-bottom: 7rem;
 
-     background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,1),
-        rgba(0,0,0,1)
-    );
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(0, 0, 0, 1));
   }
 
   .tracklist {
     margin-top: 20px;
   }
+
+  section.hero .circulo {
+    left: 50%;
+    right: 50%;
+    transform: translate(-48%, 20%);
+  }
+
 }
 
 
