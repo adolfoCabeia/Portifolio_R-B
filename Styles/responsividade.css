@@ -105,7 +105,7 @@
   section.hero .circulo {
     left: 50%;
     right: 50%;
-    transform: translate(-48%, 20%);
+    transform: translate(-48%, 25%);
   }
 
 }
