@@ -77,6 +77,7 @@ header .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100% !important;
 }
 
 header {
@@ -86,6 +87,7 @@ header {
     right: 0;
     z-index: 99999;
     transition: 0.3s ease-in-out;
+    width: 100% !important;
 }
 
 header.active{
