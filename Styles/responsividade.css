@@ -11,7 +11,11 @@
   }
   header .cabecalho {
     padding: 0 20px;
-}
+  }
+
+  .galeriaSection{
+    padding: 0 20px;
+  }
 
   .contactText {
     font-size: 1rem;
@@ -86,6 +90,12 @@
   .player {
     position: none;
     margin-bottom: 7rem;
+
+     background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1),
+        rgba(0,0,0,1)
+    );
   }
 
   .tracklist {
