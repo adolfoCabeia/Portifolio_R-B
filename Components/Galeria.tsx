@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { galeria } from "@/public/assets";
 
-
 type ActiveImage = {
-  id: number, 
+  id: number;
+  src: string | StaticImageData;
+  alt?: string;
 }
 
 export default function Galeria({ images }: { images: ActiveImage[] }) {
   const [active, setActive] = useState<ActiveImage | null>(null)
-
 
   return (
     <section className="galeriaSection container">
@@ -28,7 +28,7 @@ export default function Galeria({ images }: { images: ActiveImage[] }) {
           >
             <Image
               src={item.src}
-              alt="Imagem da galeria"
+              alt={item.alt || "Imagem da galeria"}
               fill
               className="image"
             />
@@ -44,7 +44,7 @@ export default function Galeria({ images }: { images: ActiveImage[] }) {
           >
             <Image
               src={active.src}
-              alt="Imagem ampliada"
+              alt={active.alt || "Imagem ampliada"}
               fill
               className="modalImage"
             />

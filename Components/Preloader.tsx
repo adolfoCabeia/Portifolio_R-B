@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+type PType={
+    logo: String
+}
 
-const Preloader = ({ logo }) => {
+const Preloader = ({ logo }: PType) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {

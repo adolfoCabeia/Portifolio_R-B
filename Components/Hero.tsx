@@ -14,79 +14,33 @@ const Hero = () => {
   const circleRef = useRef(null);
   const titleRef = useRef(null);
   const ctaRef = useRef(null);
-  const socialsRef = useRef(null);
   const scrollIconRef = useRef(null);
+  const socialsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        delay: 0.3,
-        defaults: {
-          ease: "power4.out",
-          duration: 1,
-        },
-      });
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      delay: 0.3,
+      defaults: { ease: "power4.out", duration: 1 },
+    });
 
-      tl.from(circleRef.current, {
-        scale: 0.5,
-        opacity: 0,
-        filter: "blur(20px)",
-      })
-        .from(
-          imageRef.current,
-          {
-            y: 120,
-            opacity: 0,
-            filter: "blur(15px)",
-          },
-          "-=0.6"
-        )
-        .from(
-          titleRef.current,
-          {
-            y: 80,
-            opacity: 0,
-          },
-          "-=0.5"
-        )
-        .from(
-          ctaRef.current,
-          {
-            y: 40,
-            opacity: 0,
-          },
-          "-=0.6"
-        )
-        .from(
-          socialsRef.current.children,
-          {
-            x: -30,
-            opacity: 0,
-            stagger: 0.15,
-          },
-          "-=0.5"
-        )
-        .from(
-          scrollIconRef.current,
-          {
-            opacity: 0,
-            y: -10,
-          },
-          "-=0.3"
-        );
+    tl.from(circleRef.current, { scale: 0.5, opacity: 0, filter: "blur(20px)" })
+      .from(imageRef.current, { y: 120, opacity: 0, filter: "blur(15px)" }, "-=0.6")
+      .from(titleRef.current, { y: 80, opacity: 0 }, "-=0.5")
+      .from(ctaRef.current, { y: 40, opacity: 0 }, "-=0.6");
 
-      // animação contínua do mouse (detalhe premium)
-      gsap.to(scrollIconRef.current, {
-        y: 10,
-        repeat: -1,
-        yoyo: true,
-        duration: 1.2,
-        ease: "power1.inOut",
-      });
-    }, heroRef);
+    if (socialsRef.current) {
+      tl.from(socialsRef.current.children, { x: -30, opacity: 0, stagger: 0.15 }, "-=0.5");
+    }
 
-    return () => ctx.revert();
-  }, []);
+    tl.from(scrollIconRef.current, { opacity: 0, y: -10 }, "-=0.3");
+
+    gsap.to(scrollIconRef.current, { y: 10, repeat: -1, yoyo: true, duration: 1.2, ease: "power1.inOut" });
+  }, heroRef);
+
+  return () => ctx.revert();
+}, []);
+
 
   return (
     <section ref={heroRef} className="container hero">

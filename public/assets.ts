@@ -26,13 +26,13 @@ export const menus=[
 
 export const galeria = [
 
-    {id:3, src:Img3},
-    {id:4, src:Img4},
-    {id:5, src:Img5},
-    {id:6, src:Img6},
-    {id:7, src:Img7},
-    {id:8, src:Img8},
-    {id:9, src:Img9}
+    {id:3, src:Img3,alt: "Imagem 1 da galeria" },
+    {id:4, src:Img4, alt: "Imagem 1 da galeria"},
+    {id:5, src:Img5, alt: "Imagem 1 da galeria"},
+    {id:6, src:Img6, alt: "Imagem 1 da galeria"},
+    {id:7, src:Img7, alt: "Imagem 1 da galeria"},
+    {id:8, src:Img8, alt: "Imagem 1 da galeria"},
+    {id:9, src:Img9, alt: "Imagem 1 da galeria"}
 ]
 
 
