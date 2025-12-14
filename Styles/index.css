@@ -77,7 +77,6 @@ header .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100% !important;
 }
 
 header {
@@ -312,12 +311,12 @@ section.hero .name-artist h2 {
 }
 
 section.hero .img-artist {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -41%);
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     overflow: hidden;
+    width: 100%;
     z-index: 2;
 }
 
