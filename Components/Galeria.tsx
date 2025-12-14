@@ -10,7 +10,11 @@ type ActiveImage = {
   alt?: string;
 }
 
-export default function Galeria({ images }: { images: ActiveImage[] }) {
+export default function Galeria({
+  images = galeria,
+}: {
+  images?: ActiveImage[]
+}) {
   const [active, setActive] = useState<ActiveImage | null>(null)
 
   return (

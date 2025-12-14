@@ -7,7 +7,8 @@ import { trackList } from "@/public/assets"
 const AudioPlayer = dynamic(
   () => import('react-h5-audio-player'),
   { ssr: false }
-)
+) as any
+
 import 'react-h5-audio-player/lib/styles.css';
 
 const Playlist = () => {
